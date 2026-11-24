@@ -1,0 +1,51 @@
+---
+
+### `.gitignore`
+
+```gitignore
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Large RL model weights & checkpoints (keep small final weights if under 25MB, otherwise ignore)
+models/*.zip
+models/*.pt
+models/*.pth
+models/*.onnx
+*.tar
+*.tar.gz
+
+# Training logs, TensorBoard runs & rendered gameplay videos
+logs/
+runs/
+tb_logs/
+wandb/
+videos/
+*.mp4
+*.mkv
+*.avi
+*.gif
+
+# Secrets & local environment variables
+.env
+.env.*
+*.pem
+*.key
+
+# IDE & OS clutter
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
